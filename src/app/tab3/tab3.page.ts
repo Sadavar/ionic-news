@@ -19,7 +19,7 @@ export class Tab3Page implements OnInit{
   ngOnInit() {
     
     this.newsService
-    .getData('top-headlines?category=science&country=us')
+    .getData('top-headlines?category=sports&country=us')
     .subscribe(data => {
       console.log(data)
       this.data = data;
@@ -27,7 +27,7 @@ export class Tab3Page implements OnInit{
   }
   loadArticles(infiniteScroll) {
     this.newsService
-    .getData('top-headlines?category=science&country=us')
+    .getData('top-headlines?category=sports&country=us')
     .subscribe(data => {
       console.log(data)
       this.data = data;
