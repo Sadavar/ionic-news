@@ -1,0 +1,29 @@
+<style>
+.titlething {
+padding-top: 20px;
+padding-left: 35px;
+font-size: 40px;
+margin-bottom: 0px;
+color: red;
+}
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+}
+</style>
+
+
+<ion-content>
+	<h1 class="titlething">
+		<b>SCIENCE</b>
+	</h1>
+    <ion-card *ngFor="let article of data?.articles">
+      <ion-card-header>
+        <ion-img (click)="openWithInAppBrowser(article.url)" [src]="article.urlToImage"></ion-img>
+        <ion-card-title>{{article.title.split(' - ')[0]}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{article.description}}</ion-card-content>
+	</ion-card>
+
+</ion-content>
+
